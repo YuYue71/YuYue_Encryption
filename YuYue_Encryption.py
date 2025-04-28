@@ -129,6 +129,33 @@ def full_decrypt(cipher_text, caesar_shift1=3, rail_rails=3, caesar_shift2=5):
 
 # ===== 主程式 =====
 if __name__ == "__main__":
+    print(f'''
+          
+    使用到之加密法 :
+        1. 凱薩加密 (Caesar Cipher)
+        2. 柵欄加密 (Rail Fence Cipher)
+        3. ASCII二進位轉換 (ASCII to Binary Conversion)
+        4. 二進位轉16進位 (Binary to Hexadecimal Conversion)
+        5. Base64編碼 (Base64 Encoding)
+        6. Base32編碼 (Base32 Encoding)
+        7. 壓縮 (Compression)
+
+          
+    +==============================================+
+    |             安安大來路不明的朋友             |
+    |      謝謝你願意下載並使用 YuYue 加密小工具   |
+    |                     說明 :                   |
+    |         這是個用來加密和解密的神奇小工具     |
+    |          由於作者本人還只是一個Code小白      |
+    |             所以有不足之處還請見諒           |
+    |        如果有任何問題或建議，歡迎聯繫我！    |
+    +==============================================+
+          
+                    YuYue Encryption               
+                    版本 : 1.0.0                   
+                    作者 : YuYue                   
+    
+    ''')
     while True:
         mode = input("請選擇模式 (1: 加密, 2: 解密, 0: 結束): ").strip()
         if mode == "1":
