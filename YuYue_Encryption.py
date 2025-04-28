@@ -1,5 +1,6 @@
 import base64
 import zlib
+import os
 
 # 凱薩加密（也能用來解密，shift是負的就行）
 def caesar_encrypt(text, shift):
@@ -141,3 +142,5 @@ if __name__ == "__main__":
         print(f"解密後: {decrypted_text}")
     else:
         print("無效的選項喵！")
+
+os.system("pause")  # 讓 CMD 介面不會立即關閉
