@@ -129,18 +129,22 @@ def full_decrypt(cipher_text, caesar_shift1=3, rail_rails=3, caesar_shift2=5):
 
 # ===== 主程式 =====
 if __name__ == "__main__":
-    mode = input("請選擇模式 (1: 加密, 2: 解密): ").strip()
-    if mode == "1":
-        plain_text = input("請輸入要加密的內容: ")
-        encrypted_text = full_encrypt(plain_text)
-        print(f"\n原始文本: {plain_text}")
-        print(f"加密後: {encrypted_text}")
-    elif mode == "2":
-        cipher_text = input("請輸入加密後的內容: ")
-        decrypted_text = full_decrypt(cipher_text)
-        print(f"\n加密後文本: {cipher_text}")
-        print(f"解密後: {decrypted_text}")
-    else:
-        print("無效的選項喵！")
+    while True:
+        mode = input("請選擇模式 (1: 加密, 2: 解密, 0: 結束): ").strip()
+        if mode == "1":
+            plain_text = input("請輸入要加密的內容: ")
+            encrypted_text = full_encrypt(plain_text)
+            print(f"\n原始文本: {plain_text}")
+            print(f"加密後: {encrypted_text}")
+        elif mode == "2":
+            cipher_text = input("請輸入加密後的內容: ")
+            decrypted_text = full_decrypt(cipher_text)
+            print(f"\n加密後文本: {cipher_text}")
+            print(f"解密後: {decrypted_text}")
+        elif mode == "0":
+            print("程式結束")
+            break
+        else:
+            print("無效的選項，請重新選擇。")
 
-os.system("pause")  # 讓 CMD 介面不會立即關閉
+        input("\n按下 Enter 鍵繼續...")
