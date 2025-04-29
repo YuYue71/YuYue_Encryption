@@ -154,6 +154,9 @@ if __name__ == "__main__":
                     YuYue Encryption               
                     版本 : 1.0.0                   
                     作者 : YuYue                   
+
+                幽月YuYue保有所有權利
+                    2025/04/29
     
     ''')
     while True:
@@ -165,7 +168,11 @@ if __name__ == "__main__":
             print(f"加密後: {encrypted_text}")
         elif mode == "2":
             cipher_text = input("請輸入加密後的內容: ")
-            decrypted_text = full_decrypt(cipher_text)
+            try :
+                decrypted_text = full_decrypt(cipher_text)
+            except Exception as e:
+                print(f"解密失敗，請檢查輸入的內容是否正確。錯誤信息: {e}")
+                continue
             print(f"\n加密後文本: {cipher_text}")
             print(f"解密後: {decrypted_text}")
         elif mode == "0":
